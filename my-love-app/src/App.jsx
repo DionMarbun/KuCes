@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import TenorEmbed from './TenorEmbed';
-import './App.css'; // styling tetap
+import './App.css';
 
 function App() {
   const [step, setStep] = useState(0);
@@ -25,8 +25,7 @@ function App() {
     <div className="container">
       {/* Musik */}
       <audio autoPlay loop>
-        <source src="https://dl.sndup.net/p59q/Green%20Day%20-%20Last%20Night%20on%20Earth.mp3" type="audio/mp3" />
-        Your browser does not support the audio element.
+        <source src="/wanna_be_yours.mp3" type="audio/mp3" />
       </audio>
 
       {/* Content */}
@@ -98,6 +97,7 @@ function App() {
             <button className="btn" onClick={() => window.location.reload()}>Main Lagi</button>
           </>
         )}
+
       </div>
     </div>
   );

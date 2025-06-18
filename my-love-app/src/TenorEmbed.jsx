@@ -1,4 +1,3 @@
-// TenorEmbed.jsx
 import { useEffect } from 'react';
 
 function TenorEmbed({ postId }) {
@@ -7,7 +6,11 @@ function TenorEmbed({ postId }) {
     script.src = 'https://tenor.com/embed.js';
     script.async = true;
     document.body.appendChild(script);
-  }, []);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, [postId]);
 
   return (
     <div
